@@ -1,22 +1,19 @@
 package train.vehicule;
 
-public class Voiture extends Vehicule
-{
-	private int nbPlaces;
+public class Voiture extends Vehicule {
 
-	public Voiture (double poidsAVide, int nbRoues, int nbPlaces)
-	{
-		super(poidsAVide,nbRoues);
-		this.nbPlaces = nbPlaces;
-	}
+    private int nbPlaces;
 
-	public double getPoidsEnChargeMaxi()
-	{
-		return poidsAVide + (0.082) * nbPlaces;
-	}
+    public Voiture(double poidsAVide, int nbRoues, int nbPlaces) {
+        super(poidsAVide, nbRoues);
+        this.nbPlaces = nbPlaces;
+    }
 
-	public String toString()
-	{
-		return String.format ( "%-25s", "[Voiture " + nbPlaces + " places  " ) + super.toString() + " ]";
-	}
+    public double getPoidsEnChargeMaxi() {
+        return poidsAVide + (0.082) * nbPlaces;
+    }
+
+    public String toString() {
+        return String.format("%-25s", "[Voiture " + nbPlaces + " places  ") + super.toString() + " ]";
+    }
 }
